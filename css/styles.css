@@ -1,6 +1,9 @@
 .bg{
     background-color: #e5e5e5;
 }
+#height{
+    height:100%;
+}
 
 .cart{
     margin:100px 0;
@@ -37,4 +40,14 @@
     padding-left:0;
     margin-left: 0;
     display:none;
+}
+
+
+@media only screen and (max-width: 688px){
+    #height{
+        height:auto;
+        margin-bottom:15px;
+        padding:0;
+    }
+    
 }

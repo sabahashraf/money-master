@@ -37,6 +37,8 @@ if(totalExpenseAmount > incomeAmount){
 //calculating Balance
 let balanceAmount = incomeAmount - totalExpenseAmount;
 balance.innerText = balanceAmount;
+
+//error handling for income food rent clothes input
 if( isNaN(incomeAmount) || incomeAmount< 0){
     document.getElementById('income-error').style.display='block';
     totalExpense.innerText='';
