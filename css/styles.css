@@ -1,3 +1,31 @@
-h2{
-    background-color: blue;
+.bg{
+    background-color: #e5e5e5;
 }
+
+.cart{
+    margin:100px 0;
+    padding:60px 0;
+    background-color: #fff ;
+
+}
+.cart-item{
+    display:flex;
+   
+    padding:15px 20px;
+    justify-content: space-between;
+}
+.item-color{
+    background-color:#f8f8f8;
+}
+.center-item{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+.form-control{
+    background-color: #dcdcdc;
+    border:none;
+}
+
