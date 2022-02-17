@@ -1,12 +1,6 @@
 
-const save = document.getElementById('save');
 
 
-
-
-const savingAmount= document.getElementById('savings');
-const remainingAmount = document.getElementById('rest');
-console.log(save);
 
 
 function balance(){
@@ -35,6 +29,11 @@ const balance = document.getElementById('balance');
 //calculating Total expenses
 let totalExpenseAmount= foodExpense + rentExpense + clothesExpense;
 totalExpense.innerText = totalExpenseAmount;
+//error checking
+if(totalExpenseAmount > incomeAmount){
+    document.getElementById('notify-error').style.display ='block';
+    document.getElementById('balance-display').style.display = 'none';
+}
 //calculating Balance
 let balanceAmount = incomeAmount - totalExpenseAmount;
 balance.innerText = balanceAmount;
@@ -59,8 +58,44 @@ if( isNaN(clothesExpense) || clothesExpense< 0){
     balance.innerText='';
 } 
 
+}
+
+//second part
+function savings(){
+    const income = document.getElementById('income');
+    let incomeValue = income.value;
+    let incomeAmount = parseFloat(income.value);
+    const save = document.getElementById('save');
+    let saveValue = save.value;
+    let saveAmount =parseFloat(save.value);
+    if(isNaN(saveAmount) || saveAmount < 0){
+        document.getElementById('save-error').style.display = 'block';
+        document.getElementById('remaining-display').style.display ='none';
+        document.getElementById('saving-display').style.display ='none';
+        
+    }
+    const balance = document.getElementById('balance');
+    let balanceValue = balance.innerText;
 
 
+
+
+const savingAmount= document.getElementById('savings');
+const remainingAmount = document.getElementById('rest');
+
+
+savingAmount.innerText = (incomeAmount * saveAmount )/100;
+let savingAmountValue =savingAmount.innerText;
+
+//error handling
+if(savingAmountValue > balanceValue){
+    document.getElementById('notify-error2').style.display ='block';
+    document.getElementById('remaining-display').style.display ='none';
+    document.getElementById('saving-display').style.display ='none';
+}
+
+
+remainingAmount.innerText = balanceValue- savingAmountValue;
 
 
 

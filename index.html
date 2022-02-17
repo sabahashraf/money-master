@@ -60,7 +60,8 @@
                         </div>
                         <div class="text-center my-4">
                         <h5>Total Expenses:<span id="total-exp"></span></h5>
-                        <h5>Balance:<span id="balance"></span></h5>
+                        <p id="notify-error" class="error mt-2"> You can't expense more than your income</p>
+                        <h5 id="balance-display">Balance:<span id="balance"></span></h5>
 
                         </div>
                         <div class="col-md-12 my-3">
@@ -68,8 +69,9 @@
                                 <label for="save" class="form-label col-md-2">Save:</label>
                                 <input type="text" class="form-control w-25 col-md-5" id="save">
                                 <span class="col-md-1"> &#37;</span>
-                                <button class="btn btn-primary col-md-5 ">Calculate</button>
+                                <button onclick="savings()"class="btn btn-primary col-md-5 ">Save</button>
                               </div>
+                            
 
 
 
@@ -82,10 +84,16 @@
 
 
                         <div class="text-center my-4">
-                            <h5>Saving Amount:<span id="savings">1000</span></h5>
-                            <h5>Remaining Balance:<span id="rest">500</span></h5>
+                            <p id="notify-error2" class="error mt-2">You don't have enough money to save</p>
+                            <p id="save-error" class="error mt-2">Please enter a positive number</p>
+                           
+                            <h5 id="saving-display">Saving Amount:<span id="savings"></span></h5>
+                         
+                            
+                            <h5 id="remaining-display">Remaining Balance:<span id="rest"></span></h5>
     
                             </div>
+                            
 
 
 
