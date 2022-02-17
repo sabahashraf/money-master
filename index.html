@@ -33,26 +33,34 @@
                         <div class="col-md-12 center-item">
                             <label for="income" class="form-label col-md-3 ">Income:</label>
                             <input type="text" class="form-control col-md-7 w-75" id="income">
+                           
                           </div>
+                          <p id="income-error" class="error " >Please enter a valid number</p>
                           <h5 class="text-center mt-4 mb-3">Expenses</h5>
                          <div>
                               <div class="col-md-12 center-item mb-4">
                             <label for="food" class="form-label col-md-3 ">Food:</label>
                             <input type="text" class="form-control col-md-7 w-75" id="food">
+                            
                           </div>
+                          <p id="food-error" class="error">Please enter a valid number</p>
                           <div class="col-md-12 center-item mb-4">
                             <label for="rent" class="form-label col-md-3">Rent:</label>
                             <input type="text" class="form-control col-md-7 w-75" id="rent">
+                            
                           </div>
+                          <p id="rent-error" class="error">Please enter a valid number</p>
                           <div class="col-md-12 center-item mb-4">
                             <label for="clothes" class="form-label col-md-3">Clothes:</label>
                             <input type="text" class="form-control col-md-7 w-75" id="clothes">
+                            
                           </div>
-                          <div class="text-center"><button class="btn btn-primary mb-3 px-5 ">Calculate</button></div>
+                          <p id="clothes-error" class="error">Please enter a valid number</p>
+                          <div class="text-center"><button onclick="balance()" class="btn btn-primary mb-3 px-5 ">Calculate</button></div>
                         </div>
                         <div class="text-center my-4">
-                        <h5>Total Expenses:<span id="total-exp">1000</span></h5>
-                        <h5>Balance:<span id="balance">500</span></h5>
+                        <h5>Total Expenses:<span id="total-exp"></span></h5>
+                        <h5>Balance:<span id="balance"></span></h5>
 
                         </div>
                         <div class="col-md-12 my-3">

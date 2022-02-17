@@ -29,3 +29,12 @@
     border:none;
 }
 
+.error{
+    text-align: center;
+    color:red;
+    font-size: .8rem;
+    margin-top: -20px;
+    padding-left:0;
+    margin-left: 0;
+    display:none;
+}
